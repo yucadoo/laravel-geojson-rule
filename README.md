@@ -42,8 +42,8 @@ $validator = Validator::make(
     ['geometry' => new GeoJsonRule()] // Accept any geometry
 );
 $validator->passes(); // false
-$messages = $validator->messages();
-$messages['geometry'][0]; // The geometry does not satisfy the RFC 7946 GeoJSON Format specification because Position requires at least two elements
+$messages = $validator->messages()->get('geometry');
+$messages[0]; // The geometry does not satisfy the RFC 7946 GeoJSON Format specification because Position requires at least two elements
 ```
 
 Pass the GeoJson geometry class to limit it.
@@ -64,8 +64,8 @@ $validator = Validator::make(
     ['position' => new GeoJsonRule(Point::class)] // Accept Points only
 );
 $validator->passes(); // false
-$messages = $validator->messages();
-echo $messages['position'][0]; // The position does not satisfy the RFC 7946 GeoJSON Format specification for Point.
+$messages = $validator->messages()->get('position');
+echo $messages[0]; // The position does not satisfy the RFC 7946 GeoJSON Format specification for Point.
 ```
 
 ## Change log
