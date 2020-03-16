@@ -428,7 +428,7 @@ class GeoJsonRuleTest extends TestCase
             $this->getValidGeoJsonLineStrings(),
             $this->getValidGeoJsonMultiLineStrings(),
             $this->getValidGeoJsonPolygons(),
-            $this->getValidGeoJsonMultiPolygons(),
+            $this->getValidGeoJsonMultiPolygons()
         );
     }
 
@@ -440,7 +440,7 @@ class GeoJsonRuleTest extends TestCase
             $this->getInvalidGeoJsonLineStrings(),
             $this->getInvalidGeoJsonMultiLineStrings(),
             $this->getInvalidGeoJsonPolygons(),
-            $this->getInvalidGeoJsonMultiPolygons(),
+            $this->getInvalidGeoJsonMultiPolygons()
         );
     }
 
@@ -451,7 +451,7 @@ class GeoJsonRuleTest extends TestCase
             $this->getValidGeoJsonLineStrings(),
             $this->getValidGeoJsonMultiLineStrings(),
             $this->getValidGeoJsonPolygons(),
-            $this->getValidGeoJsonMultiPolygons(),
+            $this->getValidGeoJsonMultiPolygons()
         );
     }
 
@@ -462,7 +462,7 @@ class GeoJsonRuleTest extends TestCase
             $this->getValidGeoJsonLineStrings(),
             $this->getValidGeoJsonMultiLineStrings(),
             $this->getValidGeoJsonPolygons(),
-            $this->getValidGeoJsonMultiPolygons(),
+            $this->getValidGeoJsonMultiPolygons()
         );
     }
 
@@ -473,7 +473,7 @@ class GeoJsonRuleTest extends TestCase
             $this->getValidGeoJsonMultiPoints(),
             $this->getValidGeoJsonMultiLineStrings(),
             $this->getValidGeoJsonPolygons(),
-            $this->getValidGeoJsonMultiPolygons(),
+            $this->getValidGeoJsonMultiPolygons()
         );
     }
 
@@ -484,7 +484,7 @@ class GeoJsonRuleTest extends TestCase
             $this->getValidGeoJsonMultiPoints(),
             $this->getValidGeoJsonLineStrings(),
             $this->getValidGeoJsonPolygons(),
-            $this->getValidGeoJsonMultiPolygons(),
+            $this->getValidGeoJsonMultiPolygons()
         );
     }
 
@@ -495,7 +495,7 @@ class GeoJsonRuleTest extends TestCase
             $this->getValidGeoJsonMultiPoints(),
             $this->getValidGeoJsonLineStrings(),
             $this->getValidGeoJsonMultiLineStrings(),
-            $this->getValidGeoJsonMultiPolygons(),
+            $this->getValidGeoJsonMultiPolygons()
         );
     }
 
@@ -506,7 +506,7 @@ class GeoJsonRuleTest extends TestCase
             $this->getValidGeoJsonMultiPoints(),
             $this->getValidGeoJsonLineStrings(),
             $this->getValidGeoJsonMultiLineStrings(),
-            $this->getValidGeoJsonPolygons(),
+            $this->getValidGeoJsonPolygons()
         );
     }
 }
