@@ -7,6 +7,7 @@ namespace Yuca\LaravelGeoJsonRule;
 use GeoJson\GeoJson;
 use GeoJson\Geometry\Polygon;
 use Illuminate\Contracts\Validation\Rule;
+use InvalidArgumentException;
 use Throwable;
 
 /**
@@ -38,7 +39,13 @@ class GeoJsonRule implements Rule
     public function passes($attribute, $value)
     {
         try {
-            $value = json_decode($value);
+            if (is_string($value)) {
+                // Handle undecoded JSON
+                $value = json_decode($value);
+                if (is_null($value)) {
+                    throw new InvalidArgumentException('JSON is invalid');
+                }
+            }
             // An exception will be thrown if parsing fails
             $geometry = GeoJson::jsonUnserialize($value);
         } catch (Throwable $t) {

@@ -15,6 +15,27 @@ use PHPUnit\Framework\TestCase;
 class GeoJsonRuleTest extends TestCase
 {
     /**
+     * Test that valid GeoJSON as array passes the rule.
+     */
+    public function testDecodedJsonPassesRule()
+    {
+        $rule = new GeoJsonRule();
+        $this->assertTrue($rule->passes('test', ['type' => 'Point', 'coordinates' => [1, 2]]));
+    }
+
+    /**
+     * Test that inalid JSON fails the rule.
+     */
+    public function testInvalidJsonFailsRule()
+    {
+        $rule = new GeoJsonRule();
+        $this->assertFalse($rule->passes('test', 'Invalid JSON'));
+
+        $message = $rule->message();
+        $this->assertStringContainsString('because JSON is invalid', $message);
+    }
+
+    /**
      * Test that any valid GeoJSON passes the rule without spcified geometry type.
      * @dataProvider getValidGeoJson
      */
@@ -23,6 +44,7 @@ class GeoJsonRuleTest extends TestCase
         $rule = new GeoJsonRule();
         $this->assertTrue($rule->passes('test', $encodedJson));
     }
+
     /**
      * Test that any invalid GeoJSON fails the rule without spcified geometry type.
      * @dataProvider getInvalidGeoJson
