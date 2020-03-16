@@ -8,13 +8,12 @@
 [![Total Downloads][ico-downloads]][link-downloads]
 
 Laravel Validation Rule for GeoJSON. Built on top of the [GeoJSON PHP Library](https://github.com/jmikola/geojson).
-This package is compliant with [PSR-1], [PSR-2], [PSR-4] and [PSR-11]. If you notice compliance oversights,
+This package is compliant with [PSR-1], [PSR-2] and [PSR-4]. If you notice compliance oversights,
 please send a patch via pull request.
 
 [PSR-1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
 [PSR-2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
 [PSR-4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md
-[PSR-11]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-11-container.md
 
 ## Install
 
