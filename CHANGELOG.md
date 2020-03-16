@@ -9,6 +9,8 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ## [1.0.0] - 2020-03-14
 
 ### Added
+- `Yuca\LaravelGeoJsonRule\GeoJsonRule` rule
+- `Yuca\LaravelGeoJsonRule\GeoJsonRule` unit tests
 - Travis configuration
 - Scrutinizer configuration
 - Github community files

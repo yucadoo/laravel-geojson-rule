@@ -7,8 +7,14 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
+Laravel Validation Rule for GeoJSON. Built on top of the [GeoJSON PHP Library](https://github.com/jmikola/geojson).
+This package is compliant with [PSR-1], [PSR-2], [PSR-4] and [PSR-11]. If you notice compliance oversights,
+please send a patch via pull request.
+
+[PSR-1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
+[PSR-2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
+[PSR-4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md
+[PSR-11]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-11-container.md
 
 ## Install
 
@@ -20,9 +26,47 @@ $ composer require yuca/laravel-geojson-rule
 
 ## Usage
 
+Create a new `GeoJsonRule` instance without arguments to accept any GeoJSON geometry.
+
 ``` php
-$skeleton = new Yuca\LaravelGeoJsonRule();
-echo $skeleton->echoPhrase('Hello, League!');
+use Illuminate\Support\Facades\Validator;
+use Yuca\LaravelGeoJsonRule\GeoJsonRule;
+
+$validator = Validator::make(
+    ['geometry' => '{"type": "Point", "coordinates":[1, 2]}'],
+    ['geometry' => new GeoJsonRule()] // Accept any geometry
+);
+$validator->passes(); // true
+
+$validator = Validator::make(
+    ['geometry' => '{"type": "Point", "coordinates":[1]}'],
+    ['geometry' => new GeoJsonRule()] // Accept any geometry
+);
+$validator->passes(); // false
+$messages = $validator->messages();
+$messages['geometry'][0]; // The geometry does not satisfy the RFC 7946 GeoJSON Format specification because Position requires at least two elements
+```
+
+Pass the GeoJson geometry class to limit it.
+
+``` php
+use GeoJson\Geometry\Point;
+use Illuminate\Support\Facades\Validator;
+use Yuca\LaravelGeoJsonRule\GeoJsonRule;
+
+$validator = Validator::make(
+    ['position' => '{"type": "Point", "coordinates":[1, 2]}'],
+    ['position' => new GeoJsonRule(Point::class)] // Accept Points only
+);
+$validator->passes(); // true
+
+$validator = Validator::make(
+    ['position' => '{"type": "LineString", "coordinates":[[1, 2], [3, 4]]}'],
+    ['position' => new GeoJsonRule(Point::class)] // Accept Points only
+);
+$validator->passes(); // false
+$messages = $validator->messages();
+echo $messages['position'][0]; // The position does not satisfy the RFC 7946 GeoJSON Format specification for Point.
 ```
 
 ## Change log
