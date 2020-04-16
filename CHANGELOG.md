@@ -6,6 +6,11 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ## [Unreleased]
 
+## [2.0.0] - 2020-04-16
+
+### Changed
+- Changed vendor name from Yuca to YucaDoo
+
 ## [1.0.0] - 2020-03-14
 
 ### Added
@@ -15,5 +20,6 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 - Scrutinizer configuration
 - Github community files
 
-[Unreleased]: https://github.com/yuca/laravel-geojson-rule/compare/1.0.0...HEAD
-[1.0.0]: https://github.com/yuca/laravel-geojson-rule/releases/tag/1.0.0
+[Unreleased]: https://github.com/yucadoo/laravel-geojson-rule/compare/2.0.0...HEAD
+[2.0.0]: https://github.com/yucadoo/laravel-geojson-rule/releases/tag/2.0.0
+[1.0.0]: https://github.com/yucadoo/laravel-geojson-rule/releases/tag/1.0.0

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Yuca\LaravelGeoJsonRule;
+namespace YucaDoo\LaravelGeoJsonRule;
 
 use GeoJson\GeoJson;
 use GeoJson\Geometry\Polygon;

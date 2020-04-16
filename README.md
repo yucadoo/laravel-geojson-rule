@@ -20,7 +20,7 @@ please send a patch via pull request.
 Via Composer
 
 ``` bash
-$ composer require yuca/laravel-geojson-rule
+$ composer require yucadoo/laravel-geojson-rule
 ```
 
 ## Usage
@@ -29,7 +29,7 @@ Create a new `GeoJsonRule` instance without arguments to accept any GeoJSON geom
 
 ``` php
 use Illuminate\Support\Facades\Validator;
-use Yuca\LaravelGeoJsonRule\GeoJsonRule;
+use YucaDoo\LaravelGeoJsonRule\GeoJsonRule;
 
 $validator = Validator::make(
     ['geometry' => '{"type": "Point", "coordinates":[1, 2]}'],
@@ -51,7 +51,7 @@ Pass the GeoJson geometry class to limit it.
 ``` php
 use GeoJson\Geometry\Point;
 use Illuminate\Support\Facades\Validator;
-use Yuca\LaravelGeoJsonRule\GeoJsonRule;
+use YucaDoo\LaravelGeoJsonRule\GeoJsonRule;
 
 $validator = Validator::make(
     ['position' => '{"type": "Point", "coordinates":[1, 2]}'],
@@ -95,17 +95,17 @@ If you discover any security related issues, please email hrcajuka@gmail.com ins
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/yuca/laravel-geojson-rule.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/yucadoo/laravel-geojson-rule.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/yuca/laravel-geojson-rule/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/yuca/laravel-geojson-rule.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/yuca/laravel-geojson-rule.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/yuca/laravel-geojson-rule.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/yucadoo/laravel-geojson-rule/master.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/yucadoo/laravel-geojson-rule.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/yucadoo/laravel-geojson-rule.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/yucadoo/laravel-geojson-rule.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/yuca/laravel-geojson-rule
-[link-travis]: https://travis-ci.org/yuca/laravel-geojson-rule
-[link-scrutinizer]: https://scrutinizer-ci.com/g/yuca/laravel-geojson-rule/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/yuca/laravel-geojson-rule
-[link-downloads]: https://packagist.org/packages/yuca/laravel-geojson-rule
-[link-author]: https://github.com/yuca
+[link-packagist]: https://packagist.org/packages/yucadoo/laravel-geojson-rule
+[link-travis]: https://travis-ci.org/yucadoo/laravel-geojson-rule
+[link-scrutinizer]: https://scrutinizer-ci.com/g/yucadoo/laravel-geojson-rule/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/yucadoo/laravel-geojson-rule
+[link-downloads]: https://packagist.org/packages/yucadoo/laravel-geojson-rule
+[link-author]: https://github.com/yucadoo
 [link-contributors]: ../../contributors

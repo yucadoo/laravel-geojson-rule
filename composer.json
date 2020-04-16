@@ -1,5 +1,5 @@
 {
-    "name": "yuca/laravel-geojson-rule",
+    "name": "yucadoo/laravel-geojson-rule",
     "type": "library",
     "description": "Laravel Validation Rule for GeoJSON.",
     "keywords": [
@@ -8,13 +8,13 @@
         "geojson",
         "rule"
     ],
-    "homepage": "https://github.com/yuca/laravel-geojson-rule",
+    "homepage": "https://github.com/yucadoo/laravel-geojson-rule",
     "license": "MIT",
     "authors": [
         {
             "name": "Hrvoje Jukic",
             "email": "hrcajuka@gmail.com",
-            "homepage": "https://github.com/yuca",
+            "homepage": "https://github.com/yucadoo",
             "role": "Developer"
         }
     ],
@@ -29,12 +29,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Yuca\\LaravelGeoJsonRule\\": "src"
+            "YucaDoo\\LaravelGeoJsonRule\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Yuca\\LaravelGeoJsonRule\\": "tests"
+            "YucaDoo\\LaravelGeoJsonRule\\": "tests"
         }
     },
     "scripts": {
