@@ -22,7 +22,8 @@ Exception stack trace
 **Stack:**
  - OS: [e.g. Ubuntu 18.4]
  - PHP Version [e.g. 7.2]
- - Library Version [e.g. 1.0.0]
+ - Laravel Version [e.g. 8.0]
+ - Library Version [e.g. 2.0.1]
 
 **Additional context**
 Add any other context about the problem here.
