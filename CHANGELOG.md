@@ -6,6 +6,10 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ## [Unreleased]
 
+## [2.0.1] - 2020-09-09
+### Added
+- Compatibility with Laravel 8.
+
 ## [2.0.0] - 2020-04-16
 
 ### Changed
@@ -20,6 +24,7 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 - Scrutinizer configuration
 - Github community files
 
-[Unreleased]: https://github.com/yucadoo/laravel-geojson-rule/compare/2.0.0...HEAD
+[Unreleased]: https://github.com/yucadoo/laravel-geojson-rule/compare/2.0.1...HEAD
+[2.0.1]: https://github.com/yucadoo/laravel-geojson-rule/releases/tag/2.0.1
 [2.0.0]: https://github.com/yucadoo/laravel-geojson-rule/releases/tag/2.0.0
 [1.0.0]: https://github.com/yucadoo/laravel-geojson-rule/releases/tag/1.0.0
